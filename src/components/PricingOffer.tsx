@@ -13,7 +13,7 @@ export function PricingOffer() {
 
   const handleContinueBasic = () => {
     setShowUpsell(false);
-    window.open("https://pay.cakto.com.br/basdj8y", "_blank", "noopener,noreferrer");
+    window.open("https://pay.wiapy.com/0_C3BfSr6czD", "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -58,13 +58,16 @@ export function PricingOffer() {
               </p>
 
               {/* Price */}
-              <div className="mb-6 pb-6 border-b border-slate-700">
-                <div className="text-slate-400 line-through text-xs font-bold mb-1">De R$ 37,00</div>
-                <div className="flex items-baseline gap-1">
-                  <span className="text-slate-300 text-sm font-bold">Por apenas</span>
-                  <span className="text-4xl sm:text-5xl font-black text-white tracking-tight">R$ 14,90</span>
+              <div className="mb-6 pb-6 border-b border-slate-700 bg-slate-900/40 p-4 sm:p-5 rounded-2xl border border-slate-700/50">
+                <div className="text-slate-400 line-through text-xs sm:text-sm font-semibold mb-1">De R$ 37,00</div>
+                <div className="flex items-baseline flex-wrap gap-x-2 gap-y-0.5">
+                  <span className="text-slate-300 text-xs sm:text-sm font-extrabold uppercase tracking-wide whitespace-nowrap">Por apenas</span>
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-xl sm:text-2xl font-black text-slate-200">R$</span>
+                    <span className="text-4xl sm:text-5xl font-black text-white tracking-tight">14,90</span>
+                  </div>
                 </div>
-                <span className="text-slate-400 text-xs font-medium">Pagamento único • Sem mensalidades</span>
+                <span className="text-slate-400 text-xs font-medium block mt-2">Pagamento único • Sem mensalidades</span>
               </div>
 
               {/* Feature List */}
@@ -128,13 +131,16 @@ export function PricingOffer() {
               </p>
 
               {/* Price */}
-              <div className="mb-6 pb-6 border-b border-slate-700/80 bg-slate-900/50 p-4 rounded-2xl border border-slate-700/50">
-                <div className="text-slate-400 line-through text-xs font-bold mb-1">De R$ 97,00</div>
-                <div className="flex items-baseline gap-1">
-                  <span className="text-yellow-400 text-sm font-bold">Por apenas</span>
-                  <span className="text-5xl sm:text-6xl font-black text-yellow-300 tracking-tight">R$ 47,00</span>
+              <div className="mb-6 pb-6 border-b border-slate-700/80 bg-slate-900/60 p-4 sm:p-5 rounded-2xl border border-slate-700/60">
+                <div className="text-slate-400 line-through text-xs sm:text-sm font-semibold mb-1">De R$ 97,00</div>
+                <div className="flex items-baseline flex-wrap gap-x-2 gap-y-0.5">
+                  <span className="text-yellow-400 text-xs sm:text-sm font-extrabold uppercase tracking-wide whitespace-nowrap">Por apenas</span>
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-xl sm:text-2xl font-black text-yellow-400">R$</span>
+                    <span className="text-4xl sm:text-5xl md:text-6xl font-black text-yellow-300 tracking-tight">47,00</span>
+                  </div>
                 </div>
-                <span className="text-emerald-400 text-xs font-bold block mt-1">
+                <span className="text-emerald-400 text-xs sm:text-sm font-bold block mt-2">
                   ✓ Apenas R$ 1,56 por dia • Acesso Vitalício
                 </span>
               </div>

@@ -114,7 +114,7 @@ export function UpsellModal({ isOpen, onClose, onContinueBasic }: UpsellModalPro
           {/* CTA Buttons */}
           <div className="flex flex-col gap-2.5">
             <motion.a
-              href="https://pay.cakto.com.br/ssyyogf_814327"
+              href="https://pay.wiapy.com/Znaci3QpUM6f"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}
