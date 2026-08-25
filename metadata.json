@@ -1,0 +1,6 @@
+{
+  "name": "Kit Aula Karatê Kids",
+  "description": "Landing page de alta conversão para o Kit Aula Karatê Kids com 30 planos de aula prontos, brincadeiras, aquecimentos e bônus para Senseis e Dojos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
