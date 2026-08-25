@@ -2,14 +2,32 @@
 <html lang="pt-BR" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#dc2626" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <title>Kit Aula Karatê Kids - 30 Planos de Aula Prontos para o Dojo</title>
     <meta name="description" content="Pare de improvisar suas aulas de Karatê Kids. 30 aulas completas passo a passo com aquecimentos lúdicos, kihon adaptado e jogos." />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- DNS-Prefetch & Preconnect for external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://i.ibb.co" crossorigin />
+    <link rel="dns-prefetch" href="https://i.ibb.co" />
+    <link rel="preconnect" href="https://pay.wiapy.com" crossorigin />
+    <link rel="dns-prefetch" href="https://pay.wiapy.com" />
+    <link rel="dns-prefetch" href="https://pay.cakto.com.br" />
+
+    <!-- Preload critical LCP Hero Image for immediate mobile display -->
+    <link rel="preload" as="image" href="https://i.ibb.co/S4v6nCcf/Chat-GPT-Image-24-de-ago-de-2026-20-56-01.png" fetchpriority="high" />
+
+    <!-- Optimized Google Font Loading -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    </noscript>
   </head>
-  <body class="bg-slate-50 text-slate-900 antialiased font-sans overflow-x-hidden selection:bg-yellow-400 selection:text-slate-900">
+  <body class="bg-slate-50 text-slate-900 antialiased font-sans overflow-x-hidden selection:bg-yellow-400 selection:text-slate-900 touch-manipulation">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

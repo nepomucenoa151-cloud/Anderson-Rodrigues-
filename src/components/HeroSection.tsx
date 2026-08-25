@@ -29,20 +29,24 @@ export function HeroSection() {
         <Sparkles className="w-4 h-4 text-slate-900" />
       </motion.p>
 
-      {/* Imagem do Material Digital */}
+      {/* Imagem do Material Digital (LCP Optimized) */}
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, delay: 0.12 }}
         className="mb-6 max-w-2xl w-full px-2"
       >
-        <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border-4 border-white ring-1 ring-slate-200 bg-white">
+        <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border-4 border-white ring-1 ring-slate-200 bg-slate-100 min-h-[220px] sm:min-h-[360px] flex items-center justify-center">
           <img
             src="https://i.ibb.co/S4v6nCcf/Chat-GPT-Image-24-de-ago-de-2026-20-56-01.png"
             alt="Kit Aula Karatê Kids - Material Digital"
+            width={672}
+            height={420}
             className="w-full h-auto object-contain block mx-auto hover:scale-[1.02] transition-transform duration-300"
             referrerPolicy="no-referrer"
             loading="eager"
+            decoding="async"
+            fetchPriority="high"
           />
         </div>
       </motion.div>

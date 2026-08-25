@@ -33,7 +33,7 @@ export function FaqSection() {
   };
 
   return (
-    <section className="py-16 md:py-24 px-4 sm:px-6 max-w-4xl mx-auto">
+    <section className="py-16 md:py-24 px-4 sm:px-6 max-w-4xl mx-auto content-auto">
       <div className="text-center max-w-2xl mx-auto mb-14">
         <span className="text-blue-600 font-black text-xs uppercase tracking-widest bg-blue-50 border border-blue-100 px-3.5 py-1 rounded-full">
           DÚVIDAS FREQUENTES

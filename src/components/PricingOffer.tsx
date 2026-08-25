@@ -17,7 +17,7 @@ export function PricingOffer() {
   };
 
   return (
-    <section id="precos" className="py-16 md:py-24 px-4 sm:px-6 bg-slate-900 text-white relative overflow-hidden">
+    <section id="precos" className="py-16 md:py-24 px-4 sm:px-6 bg-slate-900 text-white relative overflow-hidden content-auto">
       {/* Upsell Modal */}
       <UpsellModal 
         isOpen={showUpsell}
@@ -178,7 +178,7 @@ export function PricingOffer() {
 
             <div>
               <motion.a
-                href="https://pay.cakto.com.br/ssyyogf_814327"
+                href="https://pay.wiapy.com/xLf4-Vw8G_RO"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.03 }}

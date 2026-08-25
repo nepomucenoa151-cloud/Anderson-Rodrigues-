@@ -3,7 +3,7 @@ import { ShieldCheck, Lock, MailCheck, RotateCcw, Award, CheckCircle } from "luc
 
 export function GuaranteeAndSecurity() {
   return (
-    <section className="py-16 md:py-20 px-4 sm:px-6 bg-white border-t border-slate-200">
+    <section className="py-16 md:py-20 px-4 sm:px-6 bg-white border-t border-slate-200 content-auto">
       <div className="max-w-4xl mx-auto">
         <div className="bg-gradient-to-br from-blue-50 via-slate-50 to-amber-50 rounded-3xl p-8 sm:p-12 border-2 border-blue-200 shadow-lg text-center flex flex-col items-center">
           
@@ -12,8 +12,12 @@ export function GuaranteeAndSecurity() {
             <img 
               src="https://i.ibb.co/7xvBBW7s/Captura-de-tela-2026-08-24-171433.png" 
               alt="Garantia e Segurança Blindada" 
+              width={96}
+              height={96}
               className="h-20 sm:h-24 w-auto object-contain drop-shadow-md rounded-full"
               referrerPolicy="no-referrer"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 

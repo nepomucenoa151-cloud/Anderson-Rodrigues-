@@ -51,7 +51,7 @@ export function DeliverablesGrid() {
   ];
 
   return (
-    <section className="py-16 md:py-24 px-4 sm:px-6 bg-slate-50 border-y border-slate-200">
+    <section className="py-16 md:py-24 px-4 sm:px-6 bg-slate-50 border-y border-slate-200 content-auto">
       <div className="max-w-6xl mx-auto">
         {/* Header da seção */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
@@ -75,13 +75,16 @@ export function DeliverablesGrid() {
             >
               <div>
                 {/* Imagem do Card com Badge Sobreposta no Canto Superior Esquerdo */}
-                <div className="relative rounded-xl sm:rounded-2xl overflow-hidden aspect-[16/10] w-full bg-slate-100 mb-4 border border-slate-100">
+                <div className="relative rounded-xl sm:rounded-2xl overflow-hidden aspect-[16/10] w-full bg-slate-100 mb-4 border border-slate-100 flex items-center justify-center">
                   <img
                     src={item.image}
                     alt={item.title}
+                    width={480}
+                    height={300}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     referrerPolicy="no-referrer"
                     loading="lazy"
+                    decoding="async"
                   />
                   {/* Badge */}
                   <span className={`absolute top-2.5 left-2.5 ${item.badgeStyle} text-[10px] sm:text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-full shadow-md`}>

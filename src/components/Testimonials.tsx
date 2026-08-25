@@ -60,7 +60,7 @@ export function Testimonials() {
   }, [currentIndex, isPaused, zoomImage]);
 
   return (
-    <section id="depoimentos" className="py-16 md:py-24 px-4 sm:px-6 bg-gradient-to-b from-slate-50 via-sky-50/40 to-slate-50 relative overflow-hidden">
+    <section id="depoimentos" className="py-16 md:py-24 px-4 sm:px-6 bg-gradient-to-b from-slate-50 via-sky-50/40 to-slate-50 relative overflow-hidden content-auto">
       {/* Subtle Background Glows */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-full max-w-5xl h-72 bg-blue-400/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -107,7 +107,7 @@ export function Testimonials() {
 
               <button
                 onClick={() => setZoomImage(testimonials[currentIndex].src)}
-                className="inline-flex items-center gap-1.5 text-xs text-slate-500 hover:text-[#0060DF] bg-slate-100 hover:bg-blue-50 px-3 py-1 rounded-full transition-colors cursor-pointer font-medium"
+                className="inline-flex items-center gap-1.5 text-xs text-slate-500 hover:text-[#0060DF] bg-slate-100 hover:bg-blue-50 px-3 py-1.5 rounded-full transition-colors cursor-pointer font-medium touch-manipulation min-h-[36px]"
                 title="Clique para ampliar o depoimento"
               >
                 <ZoomIn className="w-3.5 h-3.5" />
@@ -125,12 +125,16 @@ export function Testimonials() {
                   key={currentIndex}
                   src={testimonials[currentIndex].src}
                   alt={testimonials[currentIndex].alt}
+                  width={800}
+                  height={500}
                   initial={{ opacity: 0, scale: 0.97 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.97 }}
                   transition={{ duration: 0.35, ease: "easeInOut" }}
                   className="w-full h-full object-contain select-none group-hover:scale-[1.02] transition-transform duration-300"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
+                  decoding="async"
                 />
               </AnimatePresence>
 
@@ -143,14 +147,14 @@ export function Testimonials() {
               </div>
             </div>
 
-            {/* Left / Right Navigation Buttons */}
+            {/* Left / Right Navigation Buttons (Touch optimized) */}
             <button
               onClick={(e) => {
                 e.stopPropagation();
                 prevSlide();
               }}
               aria-label="Depoimento anterior"
-              className="absolute left-1 sm:-left-5 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white text-slate-800 shadow-xl border border-slate-200/90 flex items-center justify-center transition-all hover:bg-blue-50 hover:text-[#0060DF] hover:scale-110 active:scale-95 cursor-pointer z-20"
+              className="absolute left-1 sm:-left-5 top-1/2 -translate-y-1/2 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white text-slate-800 shadow-xl border border-slate-200/90 flex items-center justify-center transition-all hover:bg-blue-50 hover:text-[#0060DF] hover:scale-110 active:scale-95 cursor-pointer z-20 touch-manipulation"
             >
               <ChevronLeft className="w-6 h-6 stroke-[2.5]" />
             </button>
@@ -161,7 +165,7 @@ export function Testimonials() {
                 nextSlide();
               }}
               aria-label="Próximo depoimento"
-              className="absolute right-1 sm:-right-5 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white text-slate-800 shadow-xl border border-slate-200/90 flex items-center justify-center transition-all hover:bg-blue-50 hover:text-[#0060DF] hover:scale-110 active:scale-95 cursor-pointer z-20"
+              className="absolute right-1 sm:-right-5 top-1/2 -translate-y-1/2 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white text-slate-800 shadow-xl border border-slate-200/90 flex items-center justify-center transition-all hover:bg-blue-50 hover:text-[#0060DF] hover:scale-110 active:scale-95 cursor-pointer z-20 touch-manipulation"
             >
               <ChevronRight className="w-6 h-6 stroke-[2.5]" />
             </button>
@@ -174,10 +178,10 @@ export function Testimonials() {
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 aria-label={`Ir para depoimento ${index + 1}`}
-                className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
+                className={`h-3 rounded-full transition-all duration-300 cursor-pointer touch-manipulation ${
                   currentIndex === index
                     ? "w-8 bg-[#0060DF] shadow-md shadow-blue-500/40"
-                    : "w-2.5 bg-slate-300 hover:bg-slate-400"
+                    : "w-3 bg-slate-300 hover:bg-slate-400"
                 }`}
               />
             ))}
@@ -189,7 +193,7 @@ export function Testimonials() {
               <button
                 key={item.id}
                 onClick={() => setCurrentIndex(index)}
-                className={`relative rounded-xl overflow-hidden border-2 transition-all cursor-pointer aspect-[4/3] bg-white p-0.5 ${
+                className={`relative rounded-xl overflow-hidden border-2 transition-all cursor-pointer aspect-[4/3] bg-white p-0.5 touch-manipulation ${
                   currentIndex === index
                     ? "border-[#0060DF] ring-2 ring-blue-500/30 scale-105 shadow-md"
                     : "border-slate-200 opacity-60 hover:opacity-100 hover:border-slate-300"
@@ -198,8 +202,12 @@ export function Testimonials() {
                 <img
                   src={item.src}
                   alt={item.title}
+                  width={150}
+                  height={112}
                   className="w-full h-full object-cover rounded-lg"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
+                  decoding="async"
                 />
               </button>
             ))}
