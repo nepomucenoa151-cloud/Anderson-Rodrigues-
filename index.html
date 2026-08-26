@@ -12,11 +12,30 @@
     <!-- DNS-Prefetch & Preconnect for external resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://connect.facebook.net" crossorigin />
+    <link rel="preconnect" href="https://www.facebook.com" crossorigin />
+    <link rel="dns-prefetch" href="https://connect.facebook.net" />
+    <link rel="dns-prefetch" href="https://www.facebook.com" />
     <link rel="preconnect" href="https://i.ibb.co" crossorigin />
     <link rel="dns-prefetch" href="https://i.ibb.co" />
     <link rel="preconnect" href="https://pay.wiapy.com" crossorigin />
     <link rel="dns-prefetch" href="https://pay.wiapy.com" />
     <link rel="dns-prefetch" href="https://pay.cakto.com.br" />
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '656651840199573');
+      fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
 
     <!-- Preload critical LCP Hero Image for immediate mobile display -->
     <link rel="preload" as="image" href="https://i.ibb.co/S4v6nCcf/Chat-GPT-Image-24-de-ago-de-2026-20-56-01.png" fetchpriority="high" />
@@ -28,6 +47,13 @@
     </noscript>
   </head>
   <body class="bg-slate-50 text-slate-900 antialiased font-sans overflow-x-hidden selection:bg-yellow-400 selection:text-slate-900 touch-manipulation">
+    <!-- Meta Pixel Noscript Fallback -->
+    <noscript>
+      <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=656651840199573&ev=PageView&noscript=1"
+        alt=""
+      />
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
